@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OuU-Qz-8KN" customClass="KNOrderSubmitHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pc-3d-ied">
+                    <rect key="frame" x="15" y="15" width="44" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="edb-Ow-xed"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5k-R4-Kd4">
+                    <rect key="frame" x="71" y="16" width="40" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="CB6-E0-bsK"/>
+                        <constraint firstAttribute="width" constant="40" id="kQS-Kg-XfN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmC-xE-Cfu">
+                    <rect key="frame" x="74" y="16" width="33" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.23137254900000001" green="0.62745098040000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fmC-xE-Cfu" firstAttribute="leading" secondItem="3Pc-3d-ied" secondAttribute="trailing" constant="15" id="Jz2-m8-6e1"/>
+                <constraint firstItem="R5k-R4-Kd4" firstAttribute="leading" secondItem="3Pc-3d-ied" secondAttribute="trailing" constant="12" id="Lz4-vv-31m"/>
+                <constraint firstItem="R5k-R4-Kd4" firstAttribute="centerY" secondItem="3Pc-3d-ied" secondAttribute="centerY" id="YOm-3Y-gvo"/>
+                <constraint firstItem="fmC-xE-Cfu" firstAttribute="centerY" secondItem="3Pc-3d-ied" secondAttribute="centerY" id="bA5-qY-Zou"/>
+                <constraint firstItem="3Pc-3d-ied" firstAttribute="top" secondItem="OuU-Qz-8KN" secondAttribute="top" constant="15" id="l52-Ut-y5h"/>
+                <constraint firstItem="3Pc-3d-ied" firstAttribute="leading" secondItem="OuU-Qz-8KN" secondAttribute="leading" constant="15" id="vLw-Vx-zYP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arriveButton" destination="R5k-R4-Kd4" id="rS1-wA-QPf"/>
+                <outlet property="descSubLabel" destination="fmC-xE-Cfu" id="oPg-6E-KOa"/>
+                <outlet property="distanceLabel" destination="3Pc-3d-ied" id="GcS-lZ-8UZ"/>
+            </connections>
+            <point key="canvasLocation" x="-221.5" y="-244.5"/>
+        </view>
+    </objects>
+</document>

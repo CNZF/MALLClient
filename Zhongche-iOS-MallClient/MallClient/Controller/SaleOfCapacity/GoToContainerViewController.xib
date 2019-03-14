@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoToContainerViewController">
+            <connections>
+                <outlet property="btnGoto" destination="VRY-9n-Pjb" id="qJn-4H-4nR"/>
+                <outlet property="lbPlace" destination="OOX-gf-Onj" id="1fT-hY-KqT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="containers.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-lc-R8c">
+                    <rect key="frame" x="132" y="70" width="111" height="109"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="111" id="4Ge-w6-2tN"/>
+                        <constraint firstAttribute="height" constant="109" id="VYm-ro-4Mt"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京大红门 — 上海阿拉山口" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOX-gf-Onj">
+                    <rect key="frame" x="0.0" y="221" width="375" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="hvn-7l-3qo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="线路不属于“一带一路”范围，请前往" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-Kg-zdb">
+                    <rect key="frame" x="0.0" y="260" width="375" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="oq8-0g-F4I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“集装箱运力”查看" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diH-Rw-uj5">
+                    <rect key="frame" x="0.0" y="281" width="375" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="UGn-hI-ZU5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRY-9n-Pjb">
+                    <rect key="frame" x="60" y="520" width="255" height="44"/>
+                    <color key="backgroundColor" red="0.9891965389251709" green="0.41284769773483276" blue="0.031792007386684418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="9D9-XK-pqm"/>
+                    </constraints>
+                    <state key="normal" title="前往">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="gotoAction:" destination="-1" eventType="touchUpInside" id="j1t-ep-WMp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OOX-gf-Onj" firstAttribute="top" secondItem="ZEi-lc-R8c" secondAttribute="bottom" constant="42" id="BhA-26-HbH"/>
+                <constraint firstItem="VRY-9n-Pjb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="DFS-Sv-gr2"/>
+                <constraint firstAttribute="bottom" secondItem="VRY-9n-Pjb" secondAttribute="bottom" constant="103" id="ImH-e9-eOL"/>
+                <constraint firstItem="g7p-Kg-zdb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="L6f-Sg-IY5"/>
+                <constraint firstItem="diH-Rw-uj5" firstAttribute="top" secondItem="OOX-gf-Onj" secondAttribute="bottom" constant="29" id="U5P-JG-LFS"/>
+                <constraint firstAttribute="trailing" secondItem="g7p-Kg-zdb" secondAttribute="trailing" id="d6R-fj-PZk"/>
+                <constraint firstAttribute="trailing" secondItem="diH-Rw-uj5" secondAttribute="trailing" id="ecz-vY-EkZ"/>
+                <constraint firstAttribute="trailing" secondItem="OOX-gf-Onj" secondAttribute="trailing" id="ibD-ci-pxS"/>
+                <constraint firstItem="ZEi-lc-R8c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mIJ-4Y-h3v"/>
+                <constraint firstItem="diH-Rw-uj5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pdG-8B-576"/>
+                <constraint firstAttribute="trailing" secondItem="VRY-9n-Pjb" secondAttribute="trailing" constant="60" id="sYw-iE-Mmv"/>
+                <constraint firstItem="ZEi-lc-R8c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="vLH-ou-658"/>
+                <constraint firstItem="g7p-Kg-zdb" firstAttribute="top" secondItem="OOX-gf-Onj" secondAttribute="bottom" constant="8" id="wFT-P3-mji"/>
+                <constraint firstItem="OOX-gf-Onj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zSz-hF-pnV"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="containers.png" width="135" height="136"/>
+    </resources>
+</document>

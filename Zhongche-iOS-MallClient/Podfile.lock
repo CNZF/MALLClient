@@ -1,0 +1,112 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking-RACRetryExtensions (0.2.0):
+    - AFNetworking (~> 2.x)
+    - ReactiveCocoa (~> 2.x)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AMapFoundation (1.4.3)
+  - AMapSearch (6.1.0):
+    - AMapFoundation (~> 1.4)
+  - BaiduMobStat (4.7.2)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GJAlertController (1.0.0)
+  - IQKeyboardManager (3.3.7)
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.15.3)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDVersion (3.1)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - SVProgressHUD (2.1.2)
+  - XHImageViewer (0.1.2)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AFNetworking-RACRetryExtensions
+  - AMapSearch
+  - BaiduMobStat
+  - FMDB (~> 2.6.2)
+  - GJAlertController
+  - IQKeyboardManager
+  - Masonry (~> 1.0.2)
+  - MJRefresh
+  - SDCycleScrollView
+  - SDVersion (= 3.1)
+  - SDWebImage
+  - SVProgressHUD
+  - XHImageViewer
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AFNetworking-RACRetryExtensions
+    - AMapFoundation
+    - AMapSearch
+    - BaiduMobStat
+    - FMDB
+    - GJAlertController
+    - IQKeyboardManager
+    - Masonry
+    - MJRefresh
+    - ReactiveCocoa
+    - SDCycleScrollView
+    - SDVersion
+    - SDWebImage
+    - SVProgressHUD
+    - XHImageViewer
+    - YYModel
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFNetworking-RACRetryExtensions: d22d7330b099eb437c19ce08e5c39e1d2d4fbe06
+  AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
+  AMapSearch: e3f96bd0681abe70abba303709a1a05625a8f76c
+  BaiduMobStat: e84187c7057f87daac852e05692fd94c8d656bd3
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GJAlertController: 71a7f2072451bc37b780d78379c9ee4b6f357dd2
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDVersion: 1eb1509995f353302094612ea3a77df289157687
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  XHImageViewer: 7b275d2aa829e56761c30303b9d51cae086a90b9
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: f7b6f4b19a01cf4940d7b857bc0c02bd406d978a
+
+COCOAPODS: 1.5.0.beta.1

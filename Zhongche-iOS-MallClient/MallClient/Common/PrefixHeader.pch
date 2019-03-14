@@ -1,0 +1,251 @@
+//
+//  PrefixHeader.pch
+//  MallClient
+//
+//  Created by 中车_LL_iMac on 2016/11/8.
+//  Copyright © 2016年 com.zhongche.cn. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/**
+ *  全局声明部分
+ */
+#import "AppDelegate.h"
+#import "HelperUtil.h" //颜色输入
+#import "NSString+addPictureSuffix.h" //图片选择适配
+#import "UIImage+getImage.h"//生成单色 image,切出圆角
+#import "ZSEquipmentAttribute.h" //获取设备信息
+#import "UserInfoModel.h" //用户数据模型
+#import "NSString+NumberStringToMoneyString.h"
+#import "AnimationMath.h"//动画渐变效果取值
+#import "UILabel+LeftTopAlign.h"//lable左上角文本
+#import "GlobalOrderType.h"
+#import "UIImageView+WebCache.h"
+#import <SDCycleScrollView.h>
+#import <IQKeyboardManager.h>
+#import <Masonry.h>
+
+#define GAODE_MAP_KEY @"d6deb96cb78943baf4c4d6fcbe93dfbe"
+
+/**
+ *  输出测试
+ */
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\n\n\n打印时间:%s\n打印位置:  %s文件  第%d行\n内容详情:\n%s\n\n\n",[[[NSDate date] description] UTF8String],[[[NSString stringWithUTF8String:__FILE__]  lastPathComponent] UTF8String], __LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(s, ... )
+#endif
+
+#define Header_h
+
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+#define SCREEN_W_COEFFICIENT [UIScreen mainScreen].bounds.size.width / 375
+#define SCREEN_H_COEFFICIENT [UIScreen mainScreen].bounds.size.height / 667
+
+//tabbar高度
+#define kTabbarHight 44.0f
+///导航栏高度
+#define kNavBarHeaderHeight (SCREEN_H == 812 ? 88 : 64)
+///iphone底部高度
+#define kiPhoneFooterHeight (SCREEN_H == 812 ? 34 : 0)
+//版本信息
+#define VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define BUILD   [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+#define EQUIPMENTVERSION [[[UIDevice currentDevice] systemVersion] floatValue]//系统版本
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 服务
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+#define APP_CUSTOMER_SERVICE                       @"400 900 6667"
+#define APP_CUSTOMER_SERVICE_NO_                   @"4009006667"
+#define APP_SHOP                                   @"www.unitransdata.com"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 颜色
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//灰色部分
+#define APP_COLOR_GRAY_TEXT                          [HelperUtil colorWithHexString:@"9e9e9e"]
+#define APP_COLOR_GRAY1                              [HelperUtil colorWithHexString:@"cccccc"]
+#define APP_COLOR_GRAY2                              [HelperUtil colorWithHexString:@"999999"]
+#define APP_COLOR_GRAY3                              [HelperUtil colorWithHexString:@"888888"]
+#define APP_COLOR_GRAY4                              [HelperUtil colorWithHexString:@"2a2a2a"]
+#define APP_COLOR_GRAY_SEARCH_BG                     [HelperUtil colorWithHexString:@"f8f8f8"]
+#define APP_COLOR_GRAY_CAPACITY_LINE                 [HelperUtil colorWithHexString:@"EBEBEB"] 
+#define APP_COLOR_GRAY_SEARCH_TEXT                   [HelperUtil colorWithHexString:@"555555"]
+#define APP_COLOR_GRAY_TEXT_1                        [HelperUtil colorWithHexString:@"666666"]
+#define APP_COLOR_GRAY_BTN_1                         [HelperUtil colorWithHexString:@"DDDDDD"]
+#define APP_COLOR_GRAY999                            [HelperUtil colorWithHexString:@"999999"]
+#define APP_COLOR_GRAY666                            [HelperUtil colorWithHexString:@"666666"]
+//白色部分
+#define APP_COLOR_WHITE_BG                           [HelperUtil colorWithHexString:@"fafafa"]
+#define APP_COLOR_WHITE                              [HelperUtil colorWithHexString:@"ffffff"]
+#define APP_COLOR_WHITEBG                            [HelperUtil colorWithHexString:@"f5f5f5"]
+#define APP_COLOR_WHITE_BTN                          [HelperUtil colorWithHexString:@"f8f8f8"]
+
+//黑色部分
+#define APP_COLOR_BLACK_TEXT                         [HelperUtil colorWithHexString:@"222222"]
+
+//红色部分
+#define APP_COLOR_RED                                [HelperUtil colorWithHexString:@"D9495B"]
+#define APP_COLOR_RED1                               [HelperUtil colorWithHexString:@"F03E3E"]
+#define APP_COLOR_RED_TEXT                           [HelperUtil colorWithHexString:@"e25050"]
+#define APP_COLOR_RED_SEARCH_TEXT_HIGHLIGHTED        [HelperUtil colorWithHexString:@"c72237"]
+
+//黄色
+#define APP_COLOR_YELLOW                             [HelperUtil colorWithHexString:@"F5F541"]
+#define APP_COLOR_ORANGE                             [HelperUtil colorWithHexString:@"F3a017"]
+#define APP_COLOR_ORANGE1                            [HelperUtil colorWithHexString:@"FB8615"]
+#define APP_COLOR_ORANGE_                            [HelperUtil colorWithHexString:@"FF9D3E"]
+#define APP_COLOR_ORANGE_BTN                         [HelperUtil colorWithHexString:@"F39f00"]
+#define APP_COLOR_ORANGE_BTN_HIGHLIGHTED             [HelperUtil colorWithHexString:@"E48100"]
+#define APP_COLOR_ORANGE_BTN_TEXT                    [HelperUtil colorWithHexString:@"FC8716"]
+#define APP_COLOR_ORANGE_BG                          [HelperUtil colorWithHexString:@"FFEFE0"]
+
+
+
+//蓝色
+#define APP_COLOR_BLUE                               [HelperUtil colorWithHexString:@"1cb0ee"]
+#define APP_COLOR_BLUE_BTN                           [HelperUtil colorWithHexString:@"3ba0f3"]
+#define APP_COLOR_BLUE_TOP_HIGHLIGHTED               [HelperUtil colorWithHexString:@"157ED7"]
+#define APP_COLOR_BLUE_TOP                           [HelperUtil colorWithHexString:@"3CA0F4"]
+#define APP_COLOR_BLUE_BTN_                          [HelperUtil colorWithHexString:@"329Af0"]
+
+//绿色
+#define APP_COLOR_GREEN_TOP                          [HelperUtil colorWithHexString:@"25D372"]
+#define APP_COLOR_GREEN                              [HelperUtil colorWithHexString:@"4dcc4a"]
+
+//紫色
+#define APP_COLOR_PURPLE                             [HelperUtil colorWithHexString:@"004781"]
+
+//淡灰色
+#define APP_COLOR_LightGary_1                            [HelperUtil colorWithHexString:@"EBEBEB"]
+#define APP_COLOR_Btn                            [HelperUtil colorWithHexString:@"0096FF"]
+#define APP_COLOR_DeleteBtnBack                            [HelperUtil colorWithHexString:@"E80059"]
+#define APP_COLOR_RANDOM   [UIColor colorWithRed:arc4random()%255 / 255.0 green:arc4random()%255 / 255.0 blue:arc4random()%255 / 255.0 alpha:1]
+#define ENTRY_SELECT_FONT [UIFont systemFontOfSize:12.0f]
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 网络配置
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+#define RETRIES     0
+#define INTERVAL    800
+#define IMGINTERVAL 800
+
+#define LOADING     @"加载中..."
+#define BUSY        @"服务器报错"
+
+// 沙漠
+//#define BASEURL          @"http://performance.unitransdata.com:8095"
+
+//幕含
+//#define BASEURL        @"http://192.168.1.11:8081"
+
+//大师
+//#define BASEURL        @"http://192.168.1.157:8090"
+
+//鸿轩
+//#define BASEURL        @"http://192.168.1.127:8080"
+
+//开发
+//#define BASEURL        @"http://192.168.1.24:8095"
+//#define BASEIMGURL     @"http://192.168.1.24:8082/upload/image"
+
+//演示环境
+//#define BASEURL        @"http://39.106.250.181:8110"
+//#define BASEIMGURL     @"http://192.168.1.220:8888"
+//220测试
+//#define BASEURL        @"http://192.168.1.220:8095"
+//#define BASEIMGURL     @"http://192.168.1.220:8888"
+//127测试
+//#define BASEURL        @"http://192.168.1.127:8110"
+//#define BASEIMGURL      @"http://192.168.1.127:8110"
+
+//60测试
+//#define BASEURL        @"http://192.168.1.60:8110"
+//#define BASEIMGURL     @"http://192.168.1.60:8110"
+
+////生产外网
+#define BASEURL        @"http://www.unitransdata.com"
+#define BASEIMGURL     @"http://image.unitransdata.com"
+
+#define CHILEDURL   @"/mallrest/exec/"
+
+#define ABOUT  @"http://weixin.unitransdata.com/weixinrest/companyIntroduce.jsp"
+
+//网络请求状态码
+#define REQUESTSUCCESS        @"10000"
+
+#define  AboutProtocal  @"/mallrest/html/serviceitem.html"
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// 文件路径
+///////////////////////////////////////////////////////////////////////////////////////////////////
+#define FILE_PATH_LIBRARY [NSHomeDirectory() stringByAppendingPathComponent:@"Library"]
+#define USER_FILE_PATH_HISTORY [FILE_PATH_LIBRARY stringByAppendingPathComponent:@"history.archive"]
+/////////////////////////////////////////////////////////////////// ///////////////////////////////
+// 对象归档
+//////////////////////////////////////////////////////////////////////////////////////////////////
+#define USER_INFO (UserInfoModel *)[NSKeyedUnarchiver unarchiveObjectWithFile:[MyFilePlist documentFilePathStr:@"UserInfo.archive"]]
+
+/**
+ *  weakself
+ */
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define Defaults [NSUserDefaults standardUserDefaults]
+/**
+ *  strongself
+ */
+#define SS(strongSelf,weakSelf)  __strong __typeof(&*self)strongSelf = ws;
+
+#define LINE (@[@"北京-上海",@"上海-深圳",@"广州-北京",@"杭州-武汉",@"厦门-西安",@"郑州-海口",@"成都-哈尔滨",@"长春-大连",@"青岛-拉萨",@"济南-南平"][arc4random()%10])
+#define PROJECT_1 (@[@"20英尺通用集装箱",@"干散货",@"框架式",@"冷藏",@"胡定罐式",@"石油沥青",@"框架式1",@"胡定罐式1",@"30英尺通用集装箱",@"三农化肥"][arc4random()%10])
+#define PROJECT_2 (@[@"牛奶",@"化肥",@"石油",@"沥青",@"煤炭",@"钢材",@"矿石",@"液体",@"农产品",@"化肥1"][arc4random()%10])
+#define IMAGE_1 (@[@"http://img5q.duitang.com/uploads/item/201503/22/20150322122442_SwCQh.thumb.700_0.jpeg",@"http://cdn.duitang.com/uploads/item/201502/09/20150209202800_2BY4k.thumb.700_0.jpeg",@"http://img5.duitang.com/uploads/item/201408/15/20140815182314_sCBrT.thumb.700_0.jpeg",@"http://img.ph.126.net/RdA5GZCL7JhIiaPPcNICLQ==/3318871450395768553.jpg",@"http://img2.a0bi.com/upload/zl/20141119/1416384883981.jpg",@"http://img5.duitang.com/uploads/item/201508/22/20150822212443_xm5cd.png",@"http://h.hiphotos.bdimg.com/album/whcrop%3D657%2C370%3Bq%3D90/sign=a4079c58f21fbe091c0b955604103105/30adcbef76094b367363b8c3a3cc7cd98d109d2f.jpg",@"http://img3.duitang.com/uploads/item/201507/24/20150724003704_fAQGj.png",@"http://img5q.duitang.com/uploads/item/201503/03/20150303105214_hKxvi.thumb.700_0.png",@"http://18touch.qiniudn.com/uploads/20141112/1415784630427708.jpg",@""][arc4random()%10])
+#define PLACE (@[@"北京",@"上海",@"广州",@"深圳",@"杭州",@"哈尔滨",@"青岛",@"拉萨",@"郑州",@"西宁",@"沈阳",@"长春",@"石家庄",@"济南",@"西安",@"成都",@"武汉",@"重庆",@"天津",@"福州"][arc4random()%20])
+
+//字符串空判断
+CG_INLINE BOOL isNullStr(NSString *str) {
+    NSCharacterSet *whiltSpace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *textStr = [str stringByTrimmingCharactersInSet:whiltSpace];
+    if (textStr == nil ||
+        [textStr isEqualToString:@""] ||
+        textStr.length == 0 ||
+        [str isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    return NO;
+}
+
+//单例宏定义.h
+#define KN_DEFINE_SINGLETON_FOR_CLASS(className) \
+\
++(className *)shareInstance {                 \
+static className *instance = nil;         \
+static dispatch_once_t onceToken;         \
+dispatch_once(&onceToken, ^{              \
+instance = [[self alloc] init];           \
+});                                       \
+return instance;                          \
+}
+
+typedef enum : NSUInteger {
+    kKNCustomFilterTypeCONTAINER = 1, // 集装箱
+    kKNCustomFilterTypeBULK_STACK,    // 散装
+//    kKNCustomFilterTypeVECHICLE,      // 商品车
+    kKNCustomFilterTypeLARGE_SIZE,    // 大件
+    kKNCustomFilterTypeOther          // 其他
+} kKNCustomFilterType;
+
+
+
+#endif /* PrefixHeader_pch */

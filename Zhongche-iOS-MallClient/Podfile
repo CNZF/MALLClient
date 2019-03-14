@@ -1,0 +1,21 @@
+platform :ios, '7.0'
+
+target 'MallClient' do
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'SVProgressHUD'
+  pod 'YYModel'
+  pod 'MJRefresh'
+  pod 'XHImageViewer'
+  pod 'YYModel'
+  pod 'AFNetworking-RACRetryExtensions'
+#  pod 'SDVersion'
+  pod 'FMDB','~>2.6.2'
+  pod 'AMapSearch' #搜索服务SDK
+  pod 'BaiduMobStat'
+  pod 'Masonry', '~> 1.0.2'
+  pod 'IQKeyboardManager'
+  pod 'SDCycleScrollView'
+  pod 'SDVersion', '3.1'
+  pod 'GJAlertController'
+end

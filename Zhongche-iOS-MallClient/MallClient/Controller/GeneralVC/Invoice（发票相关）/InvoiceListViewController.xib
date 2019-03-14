@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvoiceListViewController">
+            <connections>
+                <outlet property="AddNewBtn" destination="6ig-ca-MeU" id="ttA-6g-8lj"/>
+                <outlet property="ViVATinvoice" destination="xW9-Kd-QNl" id="TaG-Ac-cYc"/>
+                <outlet property="btnChoose" destination="Bu6-YR-ojF" id="gOd-75-UBJ"/>
+                <outlet property="tvCommenInvoiceList" destination="6Pg-Py-6hV" id="Fg9-6Y-fY5"/>
+                <outlet property="tvVIAInvoiceList" destination="SIe-Sk-MfP" id="bdq-Yd-pv6"/>
+                <outlet property="viCommonInvoice" destination="18w-Gv-M6r" id="CGi-bE-xIb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu6-YR-ojF">
+                    <rect key="frame" x="37.5" y="8" width="300" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="XLF-EF-enq"/>
+                        <constraint firstAttribute="width" constant="300" id="nkt-EY-Omp"/>
+                    </constraints>
+                    <state key="normal" image="zzszy"/>
+                    <connections>
+                        <action selector="chooseAction:" destination="-1" eventType="touchUpInside" id="KZt-9a-bl0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-ca-MeU">
+                    <rect key="frame" x="22" y="601" width="332" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.23137254901960785" green="0.62745098039215685" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="新增发票">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="addInvoiceAction:" destination="-1" eventType="touchUpInside" id="t5a-o7-24P"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Bu6-YR-ojF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="TdR-m0-rhI"/>
+                <constraint firstItem="Bu6-YR-ojF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yef-ti-UeQ"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="18w-Gv-M6r">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" tag="11" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SIe-Sk-MfP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OyP-We-3Y8"/>
+                        <outlet property="delegate" destination="-1" id="mCN-IC-Qk9"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SIe-Sk-MfP" secondAttribute="trailing" id="0Gs-cr-10q"/>
+                <constraint firstAttribute="bottom" secondItem="SIe-Sk-MfP" secondAttribute="bottom" id="2km-ue-Gej"/>
+                <constraint firstItem="SIe-Sk-MfP" firstAttribute="leading" secondItem="18w-Gv-M6r" secondAttribute="leading" id="TWC-Gd-tdB"/>
+                <constraint firstItem="SIe-Sk-MfP" firstAttribute="top" secondItem="18w-Gv-M6r" secondAttribute="top" id="cuN-xa-g9w"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="523" y="190"/>
+        </view>
+        <view contentMode="scaleToFill" id="xW9-Kd-QNl">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" tag="12" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-Py-6hV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bAW-og-UZZ"/>
+                        <outlet property="delegate" destination="-1" id="xKJ-Lm-Bnd"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.18970906734466553" green="0.54601699113845825" blue="0.94182687997817993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6Pg-Py-6hV" firstAttribute="top" secondItem="xW9-Kd-QNl" secondAttribute="top" id="cUJ-qa-hoQ"/>
+                <constraint firstAttribute="bottom" secondItem="6Pg-Py-6hV" secondAttribute="bottom" id="hfK-lW-rHa"/>
+                <constraint firstItem="6Pg-Py-6hV" firstAttribute="leading" secondItem="xW9-Kd-QNl" secondAttribute="leading" id="nbv-Mc-4Ta"/>
+                <constraint firstAttribute="trailing" secondItem="6Pg-Py-6hV" secondAttribute="trailing" id="v1x-aW-4gz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="921" y="190"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zzszy" width="240" height="32"/>
+    </resources>
+</document>

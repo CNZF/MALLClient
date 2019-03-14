@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titles</key>
+		<array>
+			<string>货品名称</string>
+			<string>箱型箱类</string>
+			<string>用箱数量</string>
+			<string>服务方式</string>
+			<string>取货时间</string>
+			<string>发货时间</string>
+			<string>到达时间</string>
+			<string>支付方式</string>
+		</array>
+		<key>name</key>
+		<string>货品及服务信息</string>
+	</dict>
+	<dict>
+		<key>titles</key>
+		<array>
+			<string>提货联系</string>
+			<string>收货联系</string>
+		</array>
+		<key>name</key>
+		<string>联系人信息</string>
+	</dict>
+	<dict>
+		<key>titles</key>
+		<array>
+			<string>发票抬头</string>
+			<string>发票类型</string>
+			<string>发票项目</string>
+			<string>收票联系</string>
+			<string>联系电话</string>
+			<string>寄送地址</string>
+		</array>
+		<key>name</key>
+		<string>发票信息</string>
+	</dict>
+	<dict>
+		<key>titles</key>
+		<array>
+			<string>运输费用</string>
+			<string>取货费用</string>
+			<string>送货费用</string>
+			<string>费用合计</string>
+		</array>
+		<key>name</key>
+		<string>费用明细</string>
+	</dict>
+	<dict>
+		<key>titles</key>
+		<array>
+			<string>备注</string>
+		</array>
+		<key>name</key>
+		<string>备注信息</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BMr-Zj-Jxu" customClass="KNOrderCompleteHeaderSubView">
+            <rect key="frame" x="0.0" y="0.0" width="522" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KN_placeholder_icon" translatesAutoresizingMaskIntoConstraints="NO" id="eB3-C4-Uxo">
+                    <rect key="frame" x="20" y="22" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="OUe-bG-Aau"/>
+                        <constraint firstAttribute="width" constant="70" id="cQw-6k-oVB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="锡林郭勒 - 兴安" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIY-41-2gg">
+                    <rect key="frame" x="102" y="22" width="114" height="25"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大红门  -  江高镇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0r7-dV-U7c">
+                    <rect key="frame" x="102" y="49" width="410" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年4月5日起运" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOF-Uq-wM2">
+                    <rect key="frame" x="102" y="76" width="113" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-ku-ecv">
+                    <rect key="frame" x="228" y="27" width="40" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="TBE-gO-jcr"/>
+                        <constraint firstAttribute="width" constant="40" id="l7j-Mm-juy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="1日达"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="MIY-41-2gg" firstAttribute="top" secondItem="eB3-C4-Uxo" secondAttribute="top" id="2cy-w5-Xkx"/>
+                <constraint firstItem="QOF-Uq-wM2" firstAttribute="leading" secondItem="MIY-41-2gg" secondAttribute="leading" id="3VC-lu-mNi"/>
+                <constraint firstItem="MIY-41-2gg" firstAttribute="leading" secondItem="eB3-C4-Uxo" secondAttribute="trailing" constant="12" id="9Ij-VT-qxg"/>
+                <constraint firstItem="eB3-C4-Uxo" firstAttribute="centerY" secondItem="BMr-Zj-Jxu" secondAttribute="centerY" id="Ckc-uq-2xS"/>
+                <constraint firstItem="QOF-Uq-wM2" firstAttribute="bottom" secondItem="eB3-C4-Uxo" secondAttribute="bottom" id="GV0-k6-NfR"/>
+                <constraint firstItem="k7c-ku-ecv" firstAttribute="leading" secondItem="MIY-41-2gg" secondAttribute="trailing" constant="12" id="HBq-zN-POB"/>
+                <constraint firstItem="0r7-dV-U7c" firstAttribute="centerY" secondItem="eB3-C4-Uxo" secondAttribute="centerY" id="X1u-Bi-9xH"/>
+                <constraint firstItem="eB3-C4-Uxo" firstAttribute="leading" secondItem="BMr-Zj-Jxu" secondAttribute="leading" constant="20" id="b5S-J1-hTj"/>
+                <constraint firstItem="0r7-dV-U7c" firstAttribute="top" secondItem="MIY-41-2gg" secondAttribute="bottom" constant="2" id="bEg-C9-3lk"/>
+                <constraint firstAttribute="trailing" secondItem="0r7-dV-U7c" secondAttribute="trailing" constant="10" id="bPQ-Sp-DOB"/>
+                <constraint firstItem="k7c-ku-ecv" firstAttribute="centerY" secondItem="MIY-41-2gg" secondAttribute="centerY" id="cko-yg-422"/>
+                <constraint firstItem="0r7-dV-U7c" firstAttribute="leading" secondItem="MIY-41-2gg" secondAttribute="leading" id="hCm-p4-tjA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayButton" destination="k7c-ku-ecv" id="7Kr-NB-WNa"/>
+                <outlet property="descLabel" destination="0r7-dV-U7c" id="qyh-N0-HxU"/>
+                <outlet property="distanceLabel" destination="MIY-41-2gg" id="ZiL-gB-7mp"/>
+                <outlet property="orderIcon" destination="eB3-C4-Uxo" id="fue-I4-DLU"/>
+                <outlet property="timeLabel" destination="QOF-Uq-wM2" id="joQ-MU-FuZ"/>
+            </connections>
+            <point key="canvasLocation" x="1" y="-444"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KN_placeholder_icon" width="150" height="150"/>
+    </resources>
+</document>

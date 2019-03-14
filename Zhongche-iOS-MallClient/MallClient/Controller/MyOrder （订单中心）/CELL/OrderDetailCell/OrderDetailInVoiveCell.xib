@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="246" id="KGk-i7-Jjw" customClass="OrderDetailInVoiveCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="245.5"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="551-1P-zG8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发票信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfa-xZ-68q">
+                                <rect key="frame" x="15" y="16" width="61.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="RCD-kA-iTI"/>
+                            <constraint firstItem="Zfa-xZ-68q" firstAttribute="centerY" secondItem="551-1P-zG8" secondAttribute="centerY" id="Zlg-p0-sYd"/>
+                            <constraint firstItem="Zfa-xZ-68q" firstAttribute="leading" secondItem="551-1P-zG8" secondAttribute="leading" constant="15" id="q0b-NL-ShR"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VF-UV-dC8">
+                        <rect key="frame" x="15" y="53" width="290" height="177.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="551-1P-zG8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9hO-Ar-0me"/>
+                    <constraint firstAttribute="bottom" secondItem="5VF-UV-dC8" secondAttribute="bottom" constant="15" id="DXK-go-nm1"/>
+                    <constraint firstItem="5VF-UV-dC8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="F2y-2M-Luk"/>
+                    <constraint firstAttribute="trailing" secondItem="5VF-UV-dC8" secondAttribute="trailing" constant="15" id="I2e-vl-xja"/>
+                    <constraint firstItem="5VF-UV-dC8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="53" id="ZzQ-KJ-Akf"/>
+                    <constraint firstAttribute="trailing" secondItem="551-1P-zG8" secondAttribute="trailing" id="gKu-nj-Z7e"/>
+                    <constraint firstItem="551-1P-zG8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j5t-9Z-sLh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="invoiceLabel" destination="5VF-UV-dC8" id="cdG-sl-xLl"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="-66"/>
+        </tableViewCell>
+    </objects>
+</document>
